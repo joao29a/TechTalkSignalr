@@ -13,6 +13,7 @@ namespace SignalrClient
         {
             _hubConnection = new HubConnectionBuilder()
                 .WithUrl($"http://localhost:{port}/hubs/chat?user={user}")
+                .WithAutomaticReconnect()
                 .Build();
 
             _hubConnection.On<string, string>("ReceiveMessage", ReceiveMessage);

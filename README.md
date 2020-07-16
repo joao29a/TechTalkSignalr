@@ -1,5 +1,11 @@
 ## How to use
 
+Start redis with docker:
+
+```sh
+docker run --name tech-redis -p 9090:6379 redis
+```
+
 Running the server:
 
 ```sh

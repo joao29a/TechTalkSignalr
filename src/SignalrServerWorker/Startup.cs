@@ -11,7 +11,9 @@ namespace SignalrServerWorker
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSignalR();
+            services.AddSignalR()
+                .AddStackExchangeRedis("localhost:9090");
+
             services.AddHostedService<Worker>();
 
             services.AddSingleton<IUserIdProvider, TechUserIdProvider>();

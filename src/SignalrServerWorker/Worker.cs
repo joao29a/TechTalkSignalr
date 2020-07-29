@@ -31,7 +31,7 @@ namespace SignalrServerWorker
             {
                 var user = GetRandomUser();
                 await _hubContext.Clients.All.ReceiveMessage(user.Name, user.GetRandomSentence());
-                await Task.Delay(5000, stoppingToken);
+                await Task.Delay(2500, stoppingToken);
             }
         }
 

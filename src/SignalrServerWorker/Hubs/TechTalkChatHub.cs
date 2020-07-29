@@ -19,7 +19,7 @@ namespace SignalrServerWorker.Hubs
         {
             var user = Context.UserIdentifier;
             await Clients.Others.Joined(user);
-            _logger.LogInformation($"Usuario {user} entrou!");
+            _logger.LogInformation($"¡Usuario {user} entró!");
             await base.OnConnectedAsync();
         }
 
@@ -27,7 +27,7 @@ namespace SignalrServerWorker.Hubs
         {
             var user = Context.UserIdentifier;
             await Clients.Others.Unjoined(user);
-            _logger.LogInformation($"Usuario {user} saiu!");
+            _logger.LogInformation($"¡Usuario {user} salió!");
             await base.OnDisconnectedAsync(ex);
         }
 

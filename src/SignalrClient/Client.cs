@@ -34,7 +34,7 @@ namespace SignalrClient
         public Task Joined(string user)
         {
             Console.BackgroundColor = ConsoleColor.Green;
-            Console.WriteLine($"{user} entrou na sala!");
+            Console.WriteLine($"¡{user} entró en la sala!");
             Console.ResetColor();
             return Task.CompletedTask;
         }
@@ -42,7 +42,7 @@ namespace SignalrClient
         public Task Unjoined(string user)
         {
             Console.BackgroundColor = ConsoleColor.Red;
-            Console.WriteLine($"{user} saiu da sala!");
+            Console.WriteLine($"¡{user} salió de la sala!");
             Console.ResetColor();
             return Task.CompletedTask;
         }
